@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 	root to: "users#index"
-  get 'users/index'
+	get "users/edit/:id" => 'users#edit', :as => :edit
+	resources :users
+  #get 'users/index'
 
-  get "users/edit/:id" => 'users#edit', :as => :edit
   patch "users/edit/:id" => 'users#edit',  to: redirect('users/index')
 
   
