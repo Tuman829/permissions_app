@@ -1,24 +1,18 @@
 # README
+All instructions give terminal commands unless marked with a #
+To Setup: 
+Gem install bundler
+bundle 
+rake db:migrate
+rake db:seed
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To test:
+rspec --tag ~visual 
+#(this will run all controller tests)
 
-Things you may want to cover:
+rspec 
+#This will run all tests. This includes a test that runs using selenium web driver to open a browser. For this to work https://github.com/mozilla/geckodriver/releases must be installed and added to the Path 
 
-* Ruby version
+To Run:
+Rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

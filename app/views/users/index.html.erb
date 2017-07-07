@@ -1,28 +1,30 @@
-<h1>Users</h1>
-<table class = "table">
+<h1>User Permissions</h1>
+<%= render '/shared/flash_messages' %>
+<table class = "table table-hover">
+ <thead>
 	<tr>
 		<th>Email</th>
 		<th>Read</th>
 		<th>Write</th>
-		<th>Delete<th>
-		<th>change password<th>
+		<th>Delete</th>
+		<th>Change password</th>
 	</tr>
+	 </thead>
+	  <tbody>
 	<% @users.each do |user| %>
 	<tr>
-		<th><%=user.email%></th>
-		<th><%=user.read%></th>
-		<th><%=user.write%></th>
-		<th><%=user.remove%><th>
-		<th>
-			<%= link_to 'Edit Password', edit_path(user), remote: true,	'data-toggle': 'modal','data-target': '#modal-window'
-			%>
-		<th>
+		<td><%=user.email%></td>
+		<td><%=user.read%></td>
+		<td><%=user.write%></td>
+		<td><%=user.remove%></td>
+		<td>
+			<%= link_to 'Edit Password', edit_path(user), remote: true,	'data-toggle': 'modal','data-target': '#modal-window'%>
+		</td>
 	</tr>
 	<% end %>
+	</tbody>
 </table>
 
 <!-- Modal -->
-<div class="modal fade " id="modal-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  
-</div>
+<div class="modal fade " id="modal-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"></div>
 

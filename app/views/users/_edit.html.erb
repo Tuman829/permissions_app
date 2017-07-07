@@ -6,10 +6,9 @@
     </div>
 
     <div class="modal-body">
-      <%= form_for @user, remote: true do |f|%> 
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %><br>       
-      
+      <%= form_for @user, remote: true do |f|%>
+        <%= f.label :password, "New Password"  %>  (cannot be blank)       
+        <%= f.password_field :password, class: 'form-control', :required => true %><br>       
     </div>
 
     <div class="modal-footer">
